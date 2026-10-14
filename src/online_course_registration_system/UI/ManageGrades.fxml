@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="online_course_registration_system.ViewController.ManageGradesController"
+            prefHeight="700.0" prefWidth="1000.0">
+
+    <top>
+        <VBox BorderPane.alignment="CENTER">
+            <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-background-color: #ADD8E6; -fx-padding: 15;">
+                <Label text="Manage Grades" textFill="#212121">
+                    <font>
+                        <Font name="System Bold" size="22.0"/>
+                    </font>
+                </Label>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Label fx:id="professorNameLabel" textFill="#212121">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </Label>
+                <Button text="Back to Dashboard" onAction="#handleBackToDashboard"
+                        style="-fx-background-color: #D3D3D3; -fx-text-fill: #212121; -fx-background-radius: 5;">
+                    <font>
+                        <Font name="System Bold" size="12.0"/>
+                    </font>
+                </Button>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="20" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <HBox spacing="15" alignment="CENTER_LEFT">
+                <Label text="Select Course:">
+                    <font>
+                        <Font name="System Bold" size="14.0"/>
+                    </font>
+                </Label>
+                <ComboBox fx:id="courseComboBox" prefWidth="400" promptText="Select a course to manage grades"/>
+            </HBox>
+
+            <Separator/>
+
+            <TableView fx:id="studentsTable" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="studentNameColumn" text="Student Name" prefWidth="400"/>
+                    <TableColumn fx:id="gradeColumn" text="Grade" prefWidth="400"/>
+                </columns>
+            </TableView>
+
+            <HBox spacing="15" alignment="CENTER">
+                <Button text="Save Grades" onAction="#handleSaveGrades" prefWidth="150" prefHeight="40"
+                        style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 5;">
+                    <font>
+                        <Font name="System Bold" size="14.0"/>
+                    </font>
+                </Button>
+            </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>

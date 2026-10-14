@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Online_Course_Registraition_System" default="default" basedir=".">
+    <description>Builds, tests, and runs the project Online_Course_Registraition_System.</description>
+    <import file="nbproject/build-impl.xml"/>
+</project>

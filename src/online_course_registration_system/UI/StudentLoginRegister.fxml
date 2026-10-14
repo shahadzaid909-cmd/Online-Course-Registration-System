@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="online_course_registration_system.ViewController.StudentLoginRegisterController"
+            prefHeight="500.0" prefWidth="600.0"
+            style="-fx-background-color: #f5f5f5;">
+
+    <top>
+        <VBox alignment="CENTER" spacing="10" style="-fx-background-color: #ADD8E6; -fx-padding: 30;">
+            <Label text="Student" textFill="#212121">
+                <font>
+                    <Font name="System Bold" size="26.0"/>
+                </font>
+            </Label>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="30" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="50" right="80" bottom="50" left="80"/>
+            </padding>
+
+            <Button text="Sign In" onAction="#handleLogin" prefWidth="320" prefHeight="55"
+                    style="-fx-background-color: #ADD8E6; -fx-text-fill: #212121; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8;">
+            </Button>
+
+            <Button text="Sign Up" onAction="#handleRegister" prefWidth="320" prefHeight="55"
+                    style="-fx-background-color: #ADD8E6; -fx-text-fill: #212121; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8;">
+            </Button>
+
+            <Separator prefWidth="300"/>
+
+            <Button text="Back to Role Selection" onAction="#handleBack" prefWidth="250" prefHeight="40"
+                    style="-fx-background-color: #D3D3D3; -fx-text-fill: #212121; -fx-font-size: 13px; -fx-background-radius: 8;">
+            </Button>
+        </VBox>
+    </center>
+
+
+</BorderPane>

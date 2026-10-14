@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="online_course_registration_system.ViewController.SignUpController"
+            prefHeight="550.0" prefWidth="500.0"
+            style="-fx-background-color: #f5f5f5;">
+
+    <top>
+        <VBox alignment="CENTER" spacing="5" style="-fx-background-color: #ADD8E6; -fx-padding: 15;">
+            <Label text="Student Registration" textFill="#212121">
+                <font>
+                    <Font name="System Bold" size="24.0"/>
+                </font>
+            </Label>
+            <Label text="Create your account to register for courses" textFill="#212121">
+                <font>
+                    <Font size="12.0"/>
+                </font>
+            </Label>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="12" style="-fx-background-color: white; -fx-padding: 20;">
+            <VBox.margin>
+                <Insets top="10" right="30" bottom="10" left="30"/>
+            </VBox.margin>
+
+            <Label fx:id="messageLabel" wrapText="true" style="-fx-font-size: 13px;" minHeight="30"/>
+
+            <VBox spacing="5">
+                <Label text="Student ID *" style="-fx-font-weight: bold; -fx-font-size: 11px;"/>
+                <TextField fx:id="studentIdField" promptText="e.g., 445777777" prefHeight="30"
+                           style="-fx-font-size: 12px;"/>
+            </VBox>
+
+            <VBox spacing="5">
+                <Label text="Full Name *" style="-fx-font-weight: bold; -fx-font-size: 11px;"/>
+                <TextField fx:id="fullNameField" promptText="Enter your full name" prefHeight="30"
+                           style="-fx-font-size: 12px;"/>
+            </VBox>
+
+            <VBox spacing="5">
+                <Label text="Email *" style="-fx-font-weight: bold; -fx-font-size: 11px;"/>
+                <TextField fx:id="emailField" promptText="your.email@example.com" prefHeight="30"
+                           style="-fx-font-size: 12px;"/>
+            </VBox>
+
+            <VBox spacing="5">
+                <Label text="Password *" style="-fx-font-weight: bold; -fx-font-size: 11px;"/>
+                <PasswordField fx:id="passwordField" promptText="Choose a strong password" prefHeight="30"
+                               style="-fx-font-size: 12px;"/>
+            </VBox>
+
+            <VBox spacing="5">
+                <Label text="Major" style="-fx-font-weight: bold; -fx-font-size: 11px;"/>
+                <TextField fx:id="majorField" promptText="e.g., Computer Science" prefHeight="30"
+                           style="-fx-font-size: 12px;"/>
+            </VBox>
+
+            <HBox spacing="12" alignment="CENTER">
+                <padding>
+                    <Insets top="10"/>
+                </padding>
+                <Button text="Create Account" onAction="#handleSignUp" prefWidth="150" prefHeight="35"
+                        style="-fx-background-color: #ADD8E6; -fx-text-fill: #212121; -fx-font-size: 13px; -fx-font-weight: bold; -fx-background-radius: 5;">
+                </Button>
+                <Button text="Back to Login" onAction="#handleBackToLogin" prefWidth="150" prefHeight="35"
+                        style="-fx-background-color: #D3D3D3; -fx-text-fill: #212121; -fx-font-size: 13px; -fx-font-weight: bold; -fx-background-radius: 5;">
+                </Button>
+            </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>

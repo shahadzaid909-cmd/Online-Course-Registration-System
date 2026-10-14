@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="online_course_registration_system.ViewController.ProfessorDashboardController"
+            prefHeight="600.0" prefWidth="800.0">
+
+    <top>
+        <VBox BorderPane.alignment="CENTER">
+            <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-background-color: #ADD8E6; -fx-padding: 15;">
+                <Label text="Professor Dashboard" textFill="#212121">
+                    <font>
+                        <Font name="System Bold" size="24.0"/>
+                    </font>
+                </Label>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button text="Logout" onAction="#handleLogout"
+                        style="-fx-background-color: #D3D3D3; -fx-text-fill: #212121; -fx-background-radius: 5;">
+                    <font>
+                        <Font name="System Bold" size="12.0"/>
+                    </font>
+                </Button>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="20" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="30" right="30" bottom="30" left="30"/>
+            </padding>
+
+            <Label text="Professor Information" style="-fx-text-fill: #ADD8E6;">
+                <font>
+                    <Font name="System Bold" size="18.0"/>
+                </font>
+            </Label>
+
+            <GridPane hgap="15" vgap="10">
+                <columnConstraints>
+                    <ColumnConstraints minWidth="120" prefWidth="120"/>
+                    <ColumnConstraints minWidth="200" prefWidth="200"/>
+                </columnConstraints>
+
+                <Label text="Professor ID:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <font><Font name="System Bold" size="13.0"/></font>
+                </Label>
+                <Label fx:id="professorIdLabel" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <font><Font size="13.0"/></font>
+                </Label>
+
+                <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                    <font><Font name="System Bold" size="13.0"/></font>
+                </Label>
+                <Label fx:id="nameLabel" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <font><Font size="13.0"/></font>
+                </Label>
+
+                <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                    <font><Font name="System Bold" size="13.0"/></font>
+                </Label>
+                <Label fx:id="emailLabel" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <font><Font size="13.0"/></font>
+                </Label>
+            </GridPane>
+
+            <Separator/>
+
+            <Label text="Quick Actions" style="-fx-text-fill: #ADD8E6;">
+                <font>
+                    <Font name="System Bold" size="18.0"/>
+                </font>
+            </Label>
+
+            <GridPane hgap="15" vgap="15">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="50"/>
+                    <ColumnConstraints percentWidth="50"/>
+                </columnConstraints>
+
+                <Button text="My Courses" onAction="#handleManageCourses" prefWidth="200" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="0"
+                        style="-fx-background-color: #ADD8E6; -fx-text-fill: #212121; -fx-background-radius: 5;">
+                    <font><Font name="System Bold" size="14.0"/></font>
+                </Button>
+
+                <Button text="Manage Grades" onAction="#handleManageGrades" prefWidth="200" prefHeight="50" GridPane.columnIndex="1" GridPane.rowIndex="0"
+                        style="-fx-background-color: #ADD8E6; -fx-text-fill: #212121; -fx-background-radius: 5;">
+                    <font><Font name="System Bold" size="14.0"/></font>
+                </Button>
+            </GridPane>
+        </VBox>
+    </center>
+
+</BorderPane>
