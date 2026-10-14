@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="online_course_registration_system.ViewController.ManageUsersController"
+            prefHeight="750.0" prefWidth="1100.0">
+
+    <top>
+        <VBox BorderPane.alignment="CENTER">
+            <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-background-color: #ADD8E6; -fx-padding: 15;">
+                <Label text="Manage Users" textFill="#212121">
+                    <font>
+                        <Font name="System Bold" size="22.0"/>
+                    </font>
+                </Label>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button text="Back to Dashboard" onAction="#handleBackToDashboard"
+                        style="-fx-background-color: #D3D3D3; -fx-text-fill: #212121; -fx-background-radius: 5;">
+                    <font>
+                        <Font name="System Bold" size="12.0"/>
+                    </font>
+                </Button>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="15" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- Add User Form -->
+            <VBox spacing="10" style="-fx-background-color: #f5f5f5; -fx-padding: 15; -fx-border-color: #ddd; -fx-border-width: 1;">
+                <Label text="Add New User" style="-fx-text-fill: #ADD8E6;">
+                    <font>
+                        <Font name="System Bold" size="16.0"/>
+                    </font>
+                </Label>
+
+                <GridPane hgap="15" vgap="10">
+                    <columnConstraints>
+                        <ColumnConstraints minWidth="100" prefWidth="100"/>
+                        <ColumnConstraints minWidth="200" prefWidth="250"/>
+                        <ColumnConstraints minWidth="100" prefWidth="100"/>
+                        <ColumnConstraints minWidth="200" prefWidth="250"/>
+                    </columnConstraints>
+
+                    <Label text="ID:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                        <font><Font name="System Bold" size="12.0"/></font>
+                    </Label>
+                    <TextField fx:id="idField" promptText="Enter ID" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                    <Label text="Name:" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                        <font><Font name="System Bold" size="12.0"/></font>
+                    </Label>
+                    <TextField fx:id="nameField" promptText="Enter full name" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+                    <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                        <font><Font name="System Bold" size="12.0"/></font>
+                    </Label>
+                    <TextField fx:id="emailField" promptText="Enter email" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                    <Label text="Password:" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                        <font><Font name="System Bold" size="12.0"/></font>
+                    </Label>
+                    <PasswordField fx:id="passwordField" promptText="Enter password" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+
+                    <Label text="User Type:" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                        <font><Font name="System Bold" size="12.0"/></font>
+                    </Label>
+                    <ComboBox fx:id="userTypeComboBox" promptText="Select type" GridPane.columnIndex="1" GridPane.rowIndex="2" prefWidth="250"/>
+                </GridPane>
+
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Button text="Add User" onAction="#handleAddUser"
+                            style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 5;" prefWidth="120">
+                        <font><Font name="System Bold" size="12.0"/></font>
+                    </Button>
+                    <Label fx:id="messageLabel" textFill="#4CAF50" wrapText="true">
+                        <font><Font size="12.0"/></font>
+                    </Label>
+                </HBox>
+            </VBox>
+
+            <!-- Users Table -->
+            <Label text="All Users" style="-fx-text-fill: #ADD8E6;">
+                <font>
+                    <Font name="System Bold" size="16.0"/>
+                </font>
+            </Label>
+
+            <TableView fx:id="usersTable" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="userTypeColumn" text="User Type" prefWidth="120"/>
+                    <TableColumn fx:id="nameColumn" text="Name" prefWidth="250"/>
+                    <TableColumn fx:id="emailColumn" text="Email" prefWidth="300"/>
+                    <TableColumn fx:id="idColumn" text="ID" prefWidth="180"/>
+                </columns>
+            </TableView>
+
+            <HBox spacing="15" alignment="CENTER">
+                <Button text="Delete Selected User" onAction="#handleDeleteUser" prefWidth="200" prefHeight="35"
+                        style="-fx-background-color: #F44336; -fx-text-fill: white; -fx-background-radius: 5;">
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                </Button>
+            </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>

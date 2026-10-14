@@ -15,10 +15,7 @@ A university course registration application built using Java, JavaFX, FXML, and
 5. Run `online_course_registration_system.MainApp` through NetBeans.
 
 ## Security
-Database passwords are not stored in the prepared source package. The original local credentials were replaced by environment variables. If any previously committed password was reused elsewhere, change it.
+Database passwords are not stored in the repository. The original local credentials were replaced by environment variables. If any previously committed password was reused elsewhere, change it.
 
 ## Notes
-The project depends on external Oracle JDBC and JavaFX libraries, which are not bundled. Build and runtime functionality have not been verified.
-
-## Upload status
-The repository is being prepared. The complete source package has not yet been uploaded.
+The project depends on external Oracle JDBC and JavaFX libraries, which are not bundled in this repository. Build and runtime functionality have not been verified.
